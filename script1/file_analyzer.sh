@@ -21,16 +21,16 @@ fi
 if [[ -n "$filepath" ]]; then
     echo "File found at : $filepath"
 
-    echo "📄 File Analysis Report"
+    echo "File Analysis Report"
     echo "----------------------------"
-    echo "📁 File Path     : $filepath"
-    echo "📦 File Type     : $(file "$filepath")"
-    echo "📏 File Size     : $(stat -c%s "$filepath") bytes"
-    echo "🕒 Last Modified : $(stat -c%y "$filepath")"
-    echo "✍️  Word Count    : $(wc -w < "$filepath")"
-    echo "📚 Line Count    : $(wc -l < "$filepath")"
-    echo "👤 Owner         : $(stat -c%U "$filepath")"
-    echo "🔐 Permissions   : $(stat -c%A "$filepath")"
+    echo "File Path     : $filepath"
+    echo "File Type     : $(file "$filepath")"
+    echo "File Size     : $(stat -c%s "$filepath") bytes"
+    echo "Last Modified : $(stat -c%y "$filepath")"
+    echo "Word Count    : $(wc -w < "$filepath")"
+    echo "Line Count    : $(wc -l < "$filepath")"
+    echo "Owner         : $(stat -c%U "$filepath")"
+    echo "Permissions   : $(stat -c%A "$filepath")"
 else
     echo "Something went wrong — file path is still empty."
 fi
